@@ -4,4 +4,8 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 
 ### Technical Skills
 - Programming: SQL, R, Phyton, MATLAB, C++ 
-- Data visualization: Tableau Public (Free software), Microsoft Power BI (Desktop) 
+- Data visualization: Tableau Public (Free software), Microsoft Power BI (Desktop)
+
+### Connect with me
+- [Linkedin](www.linkedin.com/in/wan-shafiqah-852636223)
+- [Email](mailto:wannurshafiqah18@gmail.com)
