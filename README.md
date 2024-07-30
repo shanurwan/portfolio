@@ -1,7 +1,5 @@
-# Aspiring Data Analyst
-
-### Education
-Bachelor of science in Statistic University Malaya (2020-2024)
+# Welcome👋 I'm Wan Nur Shafiqah
+I'm a fresh graduate Bachelor of Science in Statistic from University Malaya
 
 ### Technical Skills
 - Programming: SQL, R, Phyton, MATLAB, C++ 
