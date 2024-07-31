@@ -18,5 +18,6 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 ## Power BI Project
 
 ## Others
-- [Data wrangling in R]
+- [Data wrangling with R](https://github.com/shanurwan/condominium)
+- [Cinema Ticketing System with C++](https://github.com/shanurwan/cinematicket)
 
