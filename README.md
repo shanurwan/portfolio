@@ -8,14 +8,13 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 - [Whatsapp](https://wa.me/60108190277)
 
 ## Technical Skills
-- Programming: SQL, R, Phyton, MATLAB, C++ 
-- Data visualization: Tableau Public (Free software), Microsoft Power BI (Desktop)
+- Programming: SQL, R, SAS, Excel VBA,MATLAB, C++
+- ETL tool: Talend
+- Data visualization: Microsoft Power BI (Desktop)
+  
 
-## Data Modelling with SQL
-
-## Tableau Project
-
-## Power BI Project
+## Project
+1. Customer Segmentation Analysis for a bank
 
 ## Others
 - [Data wrangling with R](https://github.com/shanurwan/condominium)
