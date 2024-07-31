@@ -5,6 +5,7 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 ## Connect with me
 - [Linkedin](www.linkedin.com/in/wan-shafiqah-852636223)
 - [Email](mailto:wannurshafiqah18@gmail.com)
+- [Whatsapp](https://wa.me/60108190277)
 
 ## Technical Skills
 - Programming: SQL, R, Phyton, MATLAB, C++ 
