@@ -14,7 +14,7 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 - Data visualization: Microsoft Power BI (Desktop)
   
 
-## Project
+## SQL Projects
 1. Customer Segmentation Analysis for a bank
 
 ## Others
