@@ -14,7 +14,10 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 - Data visualization: Microsoft Power BI (Desktop), Tableau Public (Free software)
   
 ## SQL Projects
-1. Strategic Insights from Profit and Loss Data Analysis to Enhance E-Commerce Performance [Ongoing]
+1. Strategic insight to enhance E-Commerce Performance [Ongoing]
+   - Platform User Growth
+   - Revenue Management
+   - Cost Planning
 2. Customer Segmentation Analysis for a bank [Ongoing]
 
 ## Others
