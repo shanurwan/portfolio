@@ -15,7 +15,9 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
   
 ## SQL Projects
 1. Strategic insight to enhance E-Commerce Performance [Ongoing]
+   
    ![E-commerce](https://github.com/shanurwan/portfolio/blob/main/images/intro.jpg)
+   
    - Platform User Growth
    - [Revenue Management](https://github.com/shanurwan/Superstore-Analysis/tree/main)
    - Cost Planning
