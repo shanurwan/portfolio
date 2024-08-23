@@ -16,9 +16,11 @@ I'm a fresh graduate Bachelor of Science in Statistic from University Malaya. He
 ## SQL Projects
 1. Strategic insight to enhance E-Commerce Performance [Ongoing]
    - Platform User Growth
-   - Revenue Management
+   - [Revenue Management](https://github.com/shanurwan/Superstore-Analysis/tree/main)
    - Cost Planning
 2. Customer Segmentation Analysis for a bank [Ongoing]
+
+## Power BI Projects
 
 ## Others
 - [Data manipulation with R](https://github.com/shanurwan/condominium)
