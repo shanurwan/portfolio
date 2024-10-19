@@ -1,6 +1,6 @@
 
 ## Connect with me
-- [Linkedin](www.linkedin.com/in/wan-shafiqah-852636223) [Email](mailto:wannurshafiqah18@gmail.com) [Whatsapp](https://wa.me/60108190277)
+🌐[Linkedin](www.linkedin.com/in/wan-shafiqah-852636223) 📧[Email](mailto:wannurshafiqah18@gmail.com) 💬[Whatsapp](https://wa.me/60108190277)
  
 ## Technical Skills
 - SQL (MySQL, PostgreSQL)
