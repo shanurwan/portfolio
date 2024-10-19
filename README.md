@@ -11,6 +11,7 @@
 - Microsoft Power BI (Desktop), Tableau Public (Free software)
   
 ## SQL Projects
+
 1. Strategic Insight To Enhance E-Commerce Performance [(see here)] (https://github.com/shanurwan/Superstore-Analysis/tree/main)
    - 
 2. Property Price Prediction in Kuala Lumpur  [Ongoing]
