@@ -8,10 +8,12 @@
 - Microsoft Azure (DataBricks, Azure Data Lake, Azure Data Warehouse)
 - Microsoft Power BI (Desktop), Tableau Public (Free software)
   
-## SQL Projects
+## Data Analysis Projects
 1. [Strategic Insight To Enhance E-Commerce Performance](https://github.com/shanurwan/Superstore-Analysis/tree/main)
 
-## Power BI Projects
+## Machine Learning Case Study
+
+## Power BI Project
 
 ## Others
 - [Data manipulation with R](https://github.com/shanurwan/condominium)
