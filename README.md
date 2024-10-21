@@ -15,8 +15,11 @@
 
 ## Power BI Project
 
+## Tableau
+
 ## Machine Learning Projects
 1. HR Analytic
+2. 
 
 
 ## Others
