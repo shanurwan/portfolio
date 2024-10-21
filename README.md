@@ -10,10 +10,14 @@
   
 ## Data Analysis Projects
 1. [Strategic Insight To Enhance E-Commerce Performance](https://github.com/shanurwan/Superstore-Analysis/tree/main)
-
-## Machine Learning Case Study
+   - Applied CTE to optimize query for Market Basket Analysis
+   - 
 
 ## Power BI Project
+
+## Machine Learning Projects
+1. HR Analytic
+
 
 ## Others
 - [Data manipulation with R](https://github.com/shanurwan/condominium)
