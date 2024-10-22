@@ -10,16 +10,18 @@
   
 ## Data Analysis Projects
 1. [Strategic Insight To Enhance E-Commerce Performance](https://github.com/shanurwan/Superstore-Analysis/tree/main)
-   - Applied CTE to optimize query for Market Basket Analysis
+   - Applied CTE to optimize SQL query for Market Basket Analysis
    - 
 
 ## Power BI Project
 
-## Tableau
+## Tableau Project
 
-## Machine Learning Projects
+## Machine Learning and Deep Learning Projects
 1. HR Analytic
-2. 
+   - Develop an AI model to Reduce hiring and training costs of employees by predicting which employees might leave the company.
+
+## Time Series Modelling
 
 
 ## Others
