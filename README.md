@@ -8,14 +8,10 @@
 - Microsoft Azure (DataBricks, Azure Data Lake, Azure Data Warehouse)
 - Microsoft Power BI (Desktop), Tableau Public (Free software)
   
-## Data Analysis Projects
+## Data Analysis and Visualization Projects
 1. [Strategic Insight To Enhance E-Commerce Performance](https://github.com/shanurwan/Superstore-Analysis/tree/main)
    - Applied CTE to optimize SQL query for Market Basket Analysis
    - 
-
-## Power BI Project
-
-## Tableau Project
 
 ## Machine Learning and Deep Learning Projects
 1. HR Analytic
