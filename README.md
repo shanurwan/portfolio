@@ -16,7 +16,7 @@
    - Fine-tuned hyperparameters and evaluated the models on imbalanced data to improve overall detection accuracy.
 
 
-## Others
-- [Data manipulation with R](https://github.com/shanurwan/condominium)
-- [Cinema Ticketing System with C++](https://github.com/shanurwan/cinematicket)
+## Guided project (Google Advance Analytic Certification Programme)
+
+
 
