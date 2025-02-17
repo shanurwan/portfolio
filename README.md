@@ -18,8 +18,9 @@
    - Analyzed and optimized product pricing and inventory levels to maximize profitability, focusing on high-performing categories and underperforming items.
    - Generated actionable insights for marketing and sales teams to optimize promotional strategies, inventory allocation, and overall customer engagement.
 3. [Simple Data Cleaning Automation](https://github.com/shanurwan/Simple-Data-Cleaning-Automation)
-   
-
+   - Developed a Python-based data preprocessing pipeline to clean and transform real estate data, handling tasks such as removing unnecessary text, converting prices to numeric values, and processing categorical variables like furnishing status.
+   - Automated the extraction of numerical information from text fields (e.g., extracting property size) and handled missing values by applying imputation techniques (e.g., filling missing bathroom/car values with the column mean).
+   - Ensured high-quality data by standardizing the format for location and room counts, addressing inconsistencies, and preparing the dataset for further analysis or machine learning model development.
 
 
 
