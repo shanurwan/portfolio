@@ -17,6 +17,8 @@
    - Conducted a comprehensive analysis of sales data from a large e-commerce platform using SQL to identify key trends and patterns in customer behavior and product performance.
    - Analyzed and optimized product pricing and inventory levels to maximize profitability, focusing on high-performing categories and underperforming items.
    - Generated actionable insights for marketing and sales teams to optimize promotional strategies, inventory allocation, and overall customer engagement.
+3. [Simple Data Cleaning Automation](https://github.com/shanurwan/Simple-Data-Cleaning-Automation)
+   
 
 
 
