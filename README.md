@@ -6,21 +6,27 @@
 - SQL (MySQL)
 - Python (Pandas, NumPy, SciPy, MatPlotLib)
 - Microsoft Power BI (Desktop)
-- Web Scrapping, Machine Learning
+- Excel (VLOOKUP,Pivot,VBA,Macros,WHat-if-Analysis)
 
 ## Projects
-1. [Credit Card Fraud Detection](https://github.com/shanurwan/Credit-card-fraud-detection/tree/main)
-   - Developed Supervised Learning models in Python to detect fraudulent transactions, using Logistic Regression and XGBoost Classifier algorithms to enhance accuracy and reduce false positives
-   - Assessed model performance using key metrics such as precision, recall, F1-score, and ROC-AUC to ensure reliable fraud detection.
-   - Fine-tuned hyperparameters and evaluated the models on imbalanced data to improve overall detection accuracy.
-2. [E-commerce Sales and Optimization Analysis](https://github.com/shanurwan/Superstore-Analysis)
-   - Conducted a comprehensive analysis of sales data from a large e-commerce platform using SQL to identify key trends and patterns in customer behavior and product performance.
-   - Analyzed and optimized product pricing and inventory levels to maximize profitability, focusing on high-performing categories and underperforming items.
-   - Generated actionable insights for marketing and sales teams to optimize promotional strategies, inventory allocation, and overall customer engagement.
-3. [Simple Data Cleaning Automation](https://github.com/shanurwan/Simple-Data-Cleaning-Automation)
-   - Developed a Python-based data preprocessing pipeline to clean and transform real estate data, handling tasks such as removing unnecessary text, converting prices to numeric values, and processing categorical variables like furnishing status.
-   - Automated the extraction of numerical information from text fields (e.g., extracting property size) and handled missing values by applying imputation techniques (e.g., filling missing bathroom/car values with the column mean).
-   - Ensured high-quality data by standardizing the format for location and room counts, addressing inconsistencies, and preparing the dataset for further analysis or machine learning model development.
+
+[E-Commerce Sales and Optimization Analysis with SQL |  2025](https://github.com/shanurwan/Superstore-Analysis)
+●	Performed in-depth sales and customer behavior analysis using advanced SQL queries to uncover purchasing trends, category performance, and regional demand shifts.
+●	Identified pricing inefficiencies and inventory gaps across product lines, enabling data-backed strategies to maximize profitability and improve stock allocation.
+●	Generated actionable insights to inform marketing and sales strategies, including targeted customer segmentation to enhance campaign effectiveness and personalization.
+
+[Excel VBA Inventory Management System |  2025](https://github.com/shanurwan/Inventory-Management-/tree/main)
+●	Built a fully automated inventory tracking system in Excel using VBA, complete with a UserForm interface for seamless product data entry (e.g., Product ID, Quantity, Reorder Level, Supplier).
+●	Programmed automated stock level checks and color-coded alerts to flag low inventory, helping users act quickly to avoid supply disruptions.
+●	Improved data accuracy and consistency while reducing manual effort, supporting faster reporting and smarter supply chain decision-making.
+●	Designed with a scalable structure, allowing easy adaptation to larger inventories or integration with procurement and supplier workflows.
+
+
+[From Stockouts to Streamlined: Supply Chain Performance Dashboard with Power BI | 2025](https://github.com/shanurwan/Supply-Chain-Dashboard/tree/main)
+●	Utilized Power Query (M Language) to clean, merge, and model logistics and sales data across product categories, transport modes, and city-level performance.
+●	Structured data into a star schema with fact and dimension tables to enable efficient cross-filtering and dynamic performance reporting.
+●	Developed advanced DAX measures including Satisfaction Score, Avg. Lead Time, Route Share %, and Category Contribution to extract actionable supply chain insights.
+●	Designed an interactive dashboard with dynamic slicers, enabling end-users to customize visual outputs and explore trends independently (enhancing data storytelling and stakeholder engagement).
 
 
 
