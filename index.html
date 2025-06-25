@@ -447,26 +447,33 @@
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div>
-                    <img src="https://github.com/shanurwan/portfolio/blob/main/doc/cropped_circle_image.png" alt="Wan Shafiqah" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="profile-image" style="display: none; background: linear-gradient(45deg, #87CEEB, #4682B4); color: white; font-size: 1.5rem; font-weight: bold; align-items: center; justify-content: center;">Profile Photo</div>
-                </div>
-                <div class="about-text">
-                    <h3>Insight Driven Problem Solver</h3>
-                    
-                    <p>I'm passionate about transforming data chaos into actionable insights that drive business decisions. My focus is on building automated solutions that eliminate repetitive data tasks, allowing teams to focus on strategic initiatives rather than manual processes.</p>
-                    
-                    <p>With expertise spanning from SQL analytics to machine learning implementations, I specialize in creating end-to-end data pipelines that not only solve immediate problems but scale with organizational growth. I believe that good data automation should be invisible to end users while being robust and maintainable for technical teams.</p>
-                    
-                    <p>Currently expanding my skill set with cloud technologies and MLOps practices to build even more sophisticated data solutions. I'm seeking graduate opportunities to deepen my understanding of advanced analytics and contribute to cutting-edge research in data science and automation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+   <section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-image-wrapper">
+        <img 
+          src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/cropped_circle_image.png" 
+          alt="Portrait of Wan Shafiqah" 
+          class="profile-image"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="profile-fallback">Profile Photo</div>
+      </div>
+
+      <div class="about-text">
+        <h3>Insight Driven Problem Solver</h3>
+        
+        <p>I'm passionate about transforming data chaos into actionable insights that drive business decisions. My focus is on building automated solutions that eliminate repetitive data tasks, allowing teams to focus on strategic initiatives rather than manual processes.</p>
+        
+        <p>With expertise spanning from SQL analytics to machine learning implementations, I specialize in creating end-to-end data pipelines that not only solve immediate problems but scale with organizational growth. I believe that good data automation should be invisible to end users while being robust and maintainable for technical teams.</p>
+        
+        <p>Currently expanding my skill set with cloud technologies and MLOps practices to build even more sophisticated data solutions. I'm seeking graduate opportunities to deepen my understanding of advanced analytics and contribute to cutting-edge research in data science and automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section id="skills" class="section">
         <div class="container">
@@ -498,84 +505,99 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://github.com/shanurwan/portfolio/blob/main/doc/Recruiter%20Analytic.png" alt="Recruiter Analytics" onerror="this.parentElement.innerHTML='Recruiter Analytics Dashboard';">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automated SQL-Based Monitoring of Recruiter Behavior in Talent Marketplaces</h3>
-                        <p class="project-description">Built a comprehensive monitoring system to track and analyze recruiter behavior patterns using SQL queries and MySQL database. The system provides insights into recruitment efficiency and helps optimize talent marketplace operations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/shanurwan/Recruiter-Analytic-SQL" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+ <section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://github.com/shanurwan/portfolio/blob/main/doc/Churn%20Prediction.png" alt="Churn Prediction" onerror="this.parentElement.innerHTML='Churn Prediction Engine';">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">From Engagement to Exit: A Scalable Churn Prediction Engine for Recruitment Platforms</h3>
-                        <p class="project-description">Developed a machine learning-powered churn prediction system using synthetic data. Created an interactive Streamlit application that predicts customer churn with high accuracy, helping businesses proactively retain customers.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Machine Learning</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/shanurwan/Customer-Churn-Analytic/blob/main/README.md" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://github.com/shanurwan/portfolio/blob/main/doc/Job%20Application%20Tracker.png" alt="Job Tracker" onerror="this.parentElement.innerHTML='Excel Job Tracker';">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Self-Updating Job Tracker with VBA – No Subscriptions, Just Smart Sheets</h3>
-                        <p class="project-description">Created an intelligent Excel-based job application tracking system using VBA macros. The system automatically updates application status, generates reports, and provides insights through pivot tables without requiring external subscriptions.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Excel VBA</span>
-                            <span class="tech-tag">Macros</span>
-                            <span class="tech-tag">Pivot Tables</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/shanurwan/Excel-Job-Tracker/blob/main/README.md" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card current-project">
-                    <div class="project-image">
-                        <img src="https://github.com/shanurwan/portfolio/blob/main/doc/AI%20Powered%20Job%20Application%20Assisstant.png" alt="AI Job Assistant" onerror="this.parentElement.innerHTML='AI Job Application Assistant';">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI-Powered Job Application Automation</h3>
-                        <p class="project-description">Currently developing an intelligent system that automates the job application process using AI. The system will analyze job postings, customize applications, and streamline the entire job search workflow for maximum efficiency.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">AI/ML</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">Coming Soon</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img 
+            src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Recruiter%20Analytic.png" 
+            alt="Screenshot of Recruiter Analytics Dashboard" 
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-fallback\'>Recruiter Analytics Dashboard</div>';">
         </div>
-    </section>
+        <div class="project-content">
+          <h3 class="project-title">Automated SQL-Based Monitoring of Recruiter Behavior in Talent Marketplaces</h3>
+          <p class="project-description">Built a comprehensive monitoring system to track and analyze recruiter behavior patterns using SQL queries and MySQL database. The system provides insights into recruitment efficiency and helps optimize talent marketplace operations.</p>
+          <div class="project-tech">
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/shanurwan/Recruiter-Analytic-SQL" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img 
+            src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Churn%20Prediction.png" 
+            alt="Screenshot of Churn Prediction Engine" 
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-fallback\'>Churn Prediction Engine</div>';">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">From Engagement to Exit: A Scalable Churn Prediction Engine for Recruitment Platforms</h3>
+          <p class="project-description">Developed a machine learning-powered churn prediction system using synthetic data. Created an interactive Streamlit application that predicts customer churn with high accuracy, helping businesses proactively retain customers.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Machine Learning</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/shanurwan/Customer-Churn-Analytic/blob/main/README.md" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img 
+            src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Job%20Application%20Tracker.png" 
+            alt="Screenshot of Excel Job Tracker" 
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-fallback\'>Excel Job Tracker</div>';">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Self-Updating Job Tracker with VBA – No Subscriptions, Just Smart Sheets</h3>
+          <p class="project-description">Created an intelligent Excel-based job application tracking system using VBA macros. The system automatically updates application status, generates reports, and provides insights through pivot tables without requiring external subscriptions.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Excel VBA</span>
+            <span class="tech-tag">Macros</span>
+            <span class="tech-tag">Pivot Tables</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/shanurwan/Excel-Job-Tracker/blob/main/README.md" class="project-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card current-project">
+        <div class="project-image">
+          <img 
+            src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/AI%20Powered%20Job%20Application%20Assisstant.png" 
+            alt="Screenshot of AI Job Application Assistant" 
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'image-fallback\'>AI Job Application Assistant</div>';">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">AI-Powered Job Application Automation</h3>
+          <p class="project-description">Currently developing an intelligent system that automates the job application process using AI. The system will analyze job postings, customize applications, and streamline the entire job search workflow for maximum efficiency.</p>
+          <div class="project-tech">
+            <span class="tech-tag">AI/ML</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <section id="contact" class="section">
         <div class="container">
