@@ -1011,7 +1011,11 @@
     </div>
 
     <script>
-       
+       function showCertificationsPage() { document.getElementById('certificationsPage').classList.add('active');
+            document.getElementById('certifications').style.display = 'none';document.body.style.overflow = 'hidden';
+            setTimeout(() => {                document.body.style.overflow = 'auto';
+            }, 100);        }
+        
         function hideCertificationsPage() {
             document.getElementById('certificationsPage').classList.remove('active');
             document.getElementById('certifications').style.display = 'block';
