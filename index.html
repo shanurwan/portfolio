@@ -910,8 +910,9 @@
     </div>
   </div>
 </section>
- <!-- 
-     <!-- Main Page Certification Section -->
+
+<!--   
+     
 <section id="certifications" class="cert-section">
     <div class="container">
         <h2 class="section-title">Professional Certifications</h2>
@@ -946,101 +947,7 @@
     </div>
 </section>
 
-<!-- Dedicated Certifications Page -->
-<div id="certificationsPage" class="cert-page">
-    <div class="cert-header">
-        <a href="#" class="back-btn" onclick="hideCertificationsPage()">← Back to Main</a>
-        <div class="container">
-            <h1>My Professional Certifications</h1>
-            <p>A comprehensive collection of my professional achievements and industry certifications</p>
-        </div>
-    </div>
-    
-    <div class="cert-grid">
-        <div class="container">
-            <div class="cert-cards">
-                <!-- Certification Card 1 -->
-                <div class="cert-card" onclick="openCertification('https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/EEFA48701339A1F3?sharingId=388278A8699BA1CF')">
-                    <div class="cert-image">
-                        <img src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Microsoft%20Azure%20Fundamental.png" alt="Microsoft Azure Fundamental">
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-title">Microsoft Azure Fundamental</h3>
-                        <p class="cert-issuer">Microsoft Azure</p>
-                        <p class="cert-date">Issued: February 2025</p>
-                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/EEFA48701339A1F3?sharingId=388278A8699BA1CF" target="_blank" class="cert-link" onclick="event.stopPropagation()">View Certificate</a>
-                    </div>
-                </div>
-                
-                <!-- Certification Card 2 -->
-                <div class="cert-card" onclick="openCertification('https://analytics.google.com/analytics/academy/')">
-                    <div class="cert-image">
-                        ⏳
-                     
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-title">AWS Machine Learning Engineer Associate</h3>
-                        <p class="cert-issuer">AWS</p>
-                        <p class="cert-date">Upcoming</p>
-                        <a href="https://analytics.google.com/analytics/academy/" target="_blank" class="cert-link" onclick="event.stopPropagation()">View Certificate</a>
-                    </div>
-                </div>
-                
-                <!-- Certification Card 3 -->
-                <div class="cert-card" onclick="openCertification('https://belajarpowerbi.com/tutor-certificate/?cert_hash=1ca718b6dd22ffc4')">
-                    <div class="cert-image">
-                        <img src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Power%20BI%20Cert.jpg" alt="Microsoft Power BI Training">
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-title">Microsoft Power BI Training (Accredited HRDcorp Trainer)</h3>
-                        <p class="cert-issuer">Digital Analytic Solution Sdn Bhd</p>
-                        <p class="cert-date">Issued: May 2025</p>
-                        <a href="https://belajarpowerbi.com/tutor-certificate/?cert_hash=1ca718b6dd22ffc4" target="_blank" class="cert-link" onclick="event.stopPropagation()">View Certificate</a>
-                    </div>
-                </div>
-                
-                <!-- Certification Card 4 -->
-                <div class="cert-card" onclick="openCertification('https://drive.google.com/file/d/1uUKoujwjP1SKSCRNaD2mavd2RQ_Q9_lm/view?usp=sharing')">
-                    <div class="cert-image">
-                        <img src="https://raw.githubusercontent.com/shanurwan/portfolio/main/doc/Mastering%20SQL%20Programming.png" alt="Mastering SQL Programming">
-                    </div>
-                    <div class="cert-info">
-                        <h3 class="cert-title">Mastering SQL Programming</h3>
-                        <p class="cert-issuer">University Malaya Actuarial Mathematics Association</p>
-                        <p class="cert-date">Issued: 2021</p>
-                        <a href="https://drive.google.com/file/d/1uUKoujwjP1SKSCRNaD2mavd2RQ_Q9_lm/view?usp=sharing" target="_blank" class="cert-link" onclick="event.stopPropagation()">View Certificate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-<script>
-function showCertificationsPage() {
-    document.getElementById('certificationsPage').classList.add('active');
-    document.getElementById('certifications').style.display = 'none';
-    window.history.pushState({page: 'certifications'}, 'Certifications', '#certifications-page');
-}
-
-function hideCertificationsPage() {
-    document.getElementById('certificationsPage').classList.remove('active');
-    document.getElementById('certifications').style.display = 'block';
-    window.history.replaceState(null, '', window.location.pathname);
-}
-
-function openCertification(url) {
-    window.open(url, '_blank');
-}
-
-// Handle browser back button
-window.addEventListener('popstate', function(event) {
-    if (document.getElementById('certificationsPage').classList.contains('active')) {
-        hideCertificationsPage();
-    }
-});
-</script>
--->
 <section id="contact" class="section">
     <div class="container">
         <h2 class="section-title">Get In Touch</h2>
