@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIT_SHAFIQAH.EXE | DEVOPS_PROTOCOL_7734</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono:wght@400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-red: #ff0000;
+            --terminal-green: #00ff41;
+            --warning-orange: #ff6600;
+            --danger-yellow: #ffff00;
+            --cyber-blue: #00ccff;
+            --dark-bg: #000000;
+            --darker-bg: #0a0a0a;
+            --matrix-green: #003300;
+            --blood-red: #cc0000;
+            --neon-pink: #ff00ff;
+        }
+        
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: var(--dark-bg);
+            color: var(--terminal-green);
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Animated Matrix Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .matrix-rain {
+            position: absolute;
+            color: var(--terminal-green);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 12px;
+            white-space: nowrap;
+            animation: matrix-fall linear infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes matrix-fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Moving Circuit Background */
+        .circuit-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 20% 20%, var(--matrix-green) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, var(--blood-red) 1px, transparent 1px),
+                linear-gradient(45deg, transparent 48%, var(--terminal-green) 49%, var(--terminal-green) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, var(--primary-red) 49%, var(--primary-red) 51%, transparent 52%);
+            background-size: 100px 100px, 150px 150px, 200px 200px, 250px 250px;
+            animation: circuit-move 20s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes circuit-move {
+            0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+            100% { background-position: 100px 100px, -150px 150px, 200px -200px, -250px 250px; }
+        }
+
+        /* Scanning Line Effect */
+        .scan-line {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+            z-index: 1000;
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Critical Alert System */
+        .critical-alert {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary-red);
+            color: var(--dark-bg);
+            padding: 15px;
+            text-align: center;
+            font-weight: 900;
+            font-family: 'Orbitron', monospace;
+            z-index: 2000;
+            animation: critical-pulse 1s infinite;
+            border-bottom: 3px solid var(--danger-yellow);
+        }
+
+        @keyframes critical-pulse {
+            0%, 100% { 
+                opacity: 1; 
+                transform: scaleY(1);
+                background: var(--primary-red);
+            }
+            50% { 
+                opacity: 0.8; 
+                transform: scaleY(1.02);
+                background: var(--blood-red);
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Robotic Header */
+        .header {
+            margin-top: 100px;
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .robot-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 4em;
+            font-weight: 900;
+            color: var(--terminal-green);
+            text-shadow: 
+                0 0 10px var(--terminal-green),
+                0 0 20px var(--terminal-green),
+                0 0 30px var(--terminal-green),
+                2px 2px 0 var(--primary-red),
+                -2px -2px 0 var(--cyber-blue);
+            animation: robot-glitch 3s infinite;
+            position: relative;
+        }
+
+        @keyframes robot-glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            10% { transform: translate(-2px, 1px) rotate(0.5deg); }
+            20% { transform: translate(1px, -1px) rotate(-0.5deg); }
+            30% { transform: translate(-1px, 2px) rotate(0.5deg); }
+            40% { transform: translate(2px, -2px) rotate(-0.5deg); }
+            50% { transform: translate(-2px, 1px) rotate(0.5deg); }
+            60% { transform: translate(1px, 1px) rotate(-0.5deg); }
+            70% { transform: translate(-1px, -1px) rotate(0.5deg); }
+            80% { transform: translate(2px, 2px) rotate(-0.5deg); }
+        }
+
+        .robot-subtitle {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5em;
+            color: var(--primary-red);
+            margin-top: 20px;
+            animation: data-stream 4s infinite;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        @keyframes data-stream {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .unit-id {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--danger-yellow);
+            font-size: 1.2em;
+            margin-top: 10px;
+            animation: blink-cursor 1.5s infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 50% { border-right: 2px solid var(--danger-yellow); }
+            51%, 100% { border-right: 2px solid transparent; }
+        }
+
+        /* Holographic Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            background: linear-gradient(45deg, var(--darker-bg), var(--matrix-green));
+            border: 2px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 15px 25px;
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item::before {
+            content: ">> ";
+            color: var(--primary-red);
+            animation: nav-blink 2s infinite;
+        }
+
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--terminal-green), transparent);
+            animation: hologram-sweep 3s infinite;
+        }
+
+        @keyframes nav-blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes hologram-sweep {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .nav-item:hover {
+            background: var(--terminal-green);
+            color: var(--dark-bg);
+            box-shadow: 
+                0 0 20px var(--terminal-green),
+                inset 0 0 20px rgba(0, 255, 65, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Apocalyptic Terminal Windows */
+        .terminal-window {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            border: 3px solid var(--primary-red);
+            border-radius: 10px;
+            margin: 40px 0;
+            overflow: hidden;
+            box-shadow: 
+                0 0 30px var(--primary-red),
+                inset 0 0 50px rgba(255, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .terminal-window::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--terminal-green), transparent);
+            animation: terminal-glow 2s infinite;
+        }
+
+        @keyframes terminal-glow {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .terminal-header {
+            background: linear-gradient(135deg, var(--primary-red), var(--blood-red));
+            color: var(--danger-yellow);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            border-bottom: 2px solid var(--danger-yellow);
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 8px;
+            margin-right: 20px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            animation: dot-pulse 2s infinite;
+        }
+
+        .dot.critical { background: var(--primary-red); }
+        .dot.warning { background: var(--danger-yellow); }
+        .dot.active { background: var(--terminal-green); }
+
+        @keyframes dot-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .terminal-body {
+            padding: 30px;
+            background: var(--dark-bg);
+            position: relative;
+        }
+
+        /* Section Styling */
+        .section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            color: var(--primary-red);
+            font-family: 'Orbitron', monospace;
+            font-size: 2em;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0 0 10px var(--primary-red);
+        }
+
+        .section-title::before {
+            content: "[ACCESSING_DATABASE] ";
+            color: var(--danger-yellow);
+            font-size: 0.6em;
+            animation: access-blink 1s infinite;
+        }
+
+        .section-title::after {
+            content: " [AUTHENTICATED]";
+            color: var(--terminal-green);
+            font-size: 0.6em;
+        }
+
+        @keyframes access-blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Robotic About Section */
+        .robot-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .stat-block {
+            background: linear-gradient(135deg, var(--matrix-green), var(--darker-bg));
+            border: 2px solid var(--terminal-green);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-block::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+            animation: stat-scan 4s infinite;
+        }
+
+        @keyframes stat-scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .robot-data {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--matrix-green);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .data-key {
+            color: var(--danger-yellow);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .data-value {
+            color: var(--terminal-green);
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Skills Matrix */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-node {
+            background: linear-gradient(135deg, var(--darker-bg), var(--matrix-green));
+            border: 2px solid var(--cyber-blue);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-node::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--cyber-blue), transparent);
+            animation: skill-rotate 4s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes skill-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .skill-category-title {
+            color: var(--neon-pink);
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.1em;
+        }
+
+        .skill-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-name {
+            color: var(--terminal-green);
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .skill-level {
+            color: var(--primary-red);
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+        }
+
+        /* Apocalyptic Projects */
+        .project-container {
+            background: linear-gradient(135deg, var(--darker-bg), var(--matrix-green));
+            border-left: 5px solid var(--primary-red);
+            border-top: 2px solid var(--danger-yellow);
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 48%, rgba(255, 0, 0, 0.1) 49%, rgba(255, 0, 0, 0.1) 51%, transparent 52%);
+            animation: project-grid 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes project-grid {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        .project-status-badge {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            padding: 8px 16px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            border-radius: 0;
+        }
+
+        .status-operational {
+            background: var(--terminal-green);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--terminal-green);
+        }
+
+        .status-developing {
+            background: var(--warning-orange);
+            color: var(--dark-bg);
+            animation: developing-pulse 2s infinite;
+        }
+
+        @keyframes developing-pulse {
+            0%, 100% { 
+                box-shadow: 0 0 15px var(--warning-orange);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 25px var(--warning-orange);
+                transform: scale(1.05);
+            }
+        }
+
+        .project-title {
+            color: var(--terminal-green);
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .project-timestamp {
+            color: var(--danger-yellow);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            color: var(--cyber-blue);
+            font-family: 'Share Tech Mono', monospace;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .project-log {
+            color: var(--terminal-green);
+            margin: 20px 0;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .project-log li {
+            margin: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .project-log li::before {
+            content: ">";
+            color: var(--primary-red);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .access-repo {
+            background: var(--dark-bg);
+            border: 2px solid var(--terminal-green);
+            color: var(--terminal-green);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .access-repo::before {
+            content: "CLONE_REPOSITORY:: ";
+            color: var(--danger-yellow);
+        }
+
+        .access-repo::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--terminal-green), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .access-repo:hover {
+            background: var(--terminal-green);
+            color: var(--dark-bg);
+            box-shadow: 0 0 25px var(--terminal-green);
+            transform: translateY(-3px);
+        }
+
+        .access-repo:hover::after {
+            left: 100%;
+        }
+
+        /* Contact Network */
+        .contact-network {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .contact-node {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--matrix-green), var(--darker-bg));
+            border: 2px solid var(--cyber-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-node::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(0, 204, 255, 0.1), transparent);
+            animation: contact-pulse 3s infinite;
+        }
+
+        @keyframes contact-pulse {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        .contact-icon {
+            color: var(--primary-red);
+            margin-right: 20px;
+            font-size: 2em;
+            animation: icon-glow 2s infinite alternate;
+        }
+
+        @keyframes icon-glow {
+            0% { text-shadow: 0 0 5px var(--primary-red); }
+            100% { text-shadow: 0 0 15px var(--primary-red), 0 0 25px var(--primary-red); }
+        }
+
+        .contact-data a {
+            color: var(--terminal-green);
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+        }
+
+        .contact-data a:hover {
+            color: var(--danger-yellow);
+            text-shadow: 0 0 10px var(--danger-yellow);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 2px solid var(--primary-red);
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--darker-bg), var(--matrix-green));
+            font-family: 'Orbitron', monospace;
+        }
+
+        .footer-text {
+            color: var(--terminal-green);
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .footer-quote {
+            color: var(--primary-red);
+            font-size: 1.2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            animation: quote-glow 4s infinite;
+        }
+
+        @keyframes quote-glow {
+            0%, 100% { text-shadow: 0 0 10px var(--primary-red); }
+            50% { text-shadow: 0 0 20px var(--primary-red), 0 0 30px var(--primary-red); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .robot-title {
+                font-size: 2.5em;
+            }
+            
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .robot-stats,
+            .skills-matrix,
+            .contact-network {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <div class="matrix-bg" id="matrixBg"></div>
+    
+    <!-- Circuit Background -->
+    <div class="circuit-bg"></div>
+    
+    <!-- Scanning Line -->
+    <div class="scan-line"></div>
+
+    <!-- Critical Alert Banner -->
+    <div class="critical-alert" id="alertBanner">
+        🚨 SYSTEM COMPROMISED | INITIATING SURVIVAL PROTOCOL | DEVOPS_UNIT_ACTIVATED 🚨
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="robot-title" id="robotTitle">UNIT_SHAFIQAH.EXE</h1>
+            <p class="robot-subtitle">DEVOPS_ENGINEER.v2.0 | INFRASTRUCTURE_GUARDIAN | SYSTEM_ARCHITECT</p>
+            <div class="unit-id">ID: WNS_001 | STATUS: OPERATIONAL | THREAT_LEVEL: MAXIMUM</div>
+        </header>
+
+        <nav class="nav">
+            <a href="#about" class="nav-item">system_profile</a>
+            <a href="#skills" class="nav-item">combat_capabilities</a>
+            <a href="#projects" class="nav-item">deployed_arsenal</a>
+            <a href="#contact" class="nav-item">establish_link</a>
+        </nav>
+
+        <section id="about" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot critical"></div>
+                        <div class="dot warning"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    UNIT_PROFILE.exe --execute --auth-level=MAX
+                </div>
+                <div class="terminal-body">
+                    <h2 class="section-title">Unit Configuration Database</h2>
+                    <div class="robot-stats">
+                        <div class="stat-block">
+                            <div class="robot-data">
+                                <span class="data-key">DESIGNATION:</span>
+                                <span class="data-value">WAN NUR SHAFIQAH</span>
+                            </div>
+                            <div class="robot-data">
+                                <span class="data-key">PRIMARY_FUNCTION:</span>
+                                <span class="data-value">DEVOPS_ENGINEER</span>
+                            </div>
+                            <div class="robot-data">
+                                <span class="data-key">EXPERIENCE_LEVEL:</span>
+                                <span class="data-value">FRESH_DEPLOYMENT_READY</span>
+                            </div>
+                            <div class="robot-data">
+                                <span class="data-key">EDUCATION_MODULE:</span>
+                                <span class="data-value">BSC_STATISTICS</span>
+                            </div>
+                            <div class="robot-data">
+                                <span class="data-key">TRAINING_FACILITY:</span>
+                                <span class="data-value">UNIVERSITY_OF_MALAYA</span>
+                            </div>
+                            <div class="robot-data">
+                                <span class="data-key">OPERATIONAL_STATUS:</span>
+                                <span class="data-value">SEEKING_DEPLOYMENT</span>
+                            </div>
+                        </div>
+                        <div class="stat-block">
+                            <div style="color: var(--terminal-green); font-family: 'Share Tech Mono', monospace; line-height: 1.6;">
+                                <p style="margin-bottom: 15px;">
+                                    >> UNIT_DESCRIPTION: Advanced cybernetic engineer designed for post-apocalyptic infrastructure survival. 
+                                    Specialized in automated system recovery, cloud-native defense protocols, and zero-downtime warfare tactics.
+                                </p>
+                                <p style="margin-bottom: 15px;">
+                                    >> MISSION_PARAMETERS: Convert digital chaos into ordered systems through Infrastructure-as-Code weaponry. 
+                                    Deploy autonomous CI/CD battle protocols. Maintain critical system uptime during maximum threat scenarios.
+                                </p>
+                                <p style="color: var(--primary-red);">
+                                    >> THREAT_ASSESSMENT: When all systems fail, UNIT_SHAFIQAH.EXE remains operational.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot critical"></div>
+                        <div class="dot warning"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    COMBAT_CAPABILITIES.dll --scan --threat-assessment
+                </div>
+                <div class="terminal-body">
+                    <h2 class="section-title">Combat Capabilities Matrix</h2>
+                    <div class="skills-matrix">
+                        <div class="skill-node">
+                            <h3 class="skill-category-title">🔧 INFRASTRUCTURE_WEAPONS</h3>
+                            <div class="skill-entry">
+                                <span class="skill-name">Terraform.exe</span>
+                                <span class="skill-level">[████████░░] 85%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">Docker.container</span>
+                                <span class="skill-level">[███████░░░] 75%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">AWS_Lambda.func</span>
+                                <span class="skill-level">[██████░░░░] 65%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">Kubernetes.orchestrator</span>
+                                <span class="skill-level">[█████░░░░░] 55%</span>
+                            </div>
+                        </div>
+                        <div class="skill-node">
+                            <h3 class="skill-category-title">⚡ AUTOMATION_PROTOCOLS</h3>
+                            <div class="skill-entry">
+                                <span class="skill-name">GitHub_Actions.bot</span>
+                                <span class="skill-level">[████████░░] 85%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">CI_CD.pipeline</span>
+                                <span class="skill-level">[███████░░░] 75%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">GitOps.warfare</span>
+                                <span class="skill-level">[██████░░░░] 65%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">Ansible.config</span>
+                                <span class="skill-level">[█████░░░░░] 55%</span>
+                            </div>
+                        </div>
+                        <div class="skill-node">
+                            <h3 class="skill-category-title">💻 CODE_ARSENAL</h3>
+                            <div class="skill-entry">
+                                <span class="skill-name">Python.neural</span>
+                                <span class="skill-level">[████████░░] 85%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">Shell.terminal</span>
+                                <span class="skill-level">[███████░░░] 75%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">YAML_JSON.parser</span>
+                                <span class="skill-level">[████████░░] 85%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">SQL.database</span>
+                                <span class="skill-level">[██████░░░░] 65%</span>
+                            </div>
+                        </div>
+                        <div class="skill-node">
+                            <h3 class="skill-category-title">📊 ANALYTICS_ENGINE</h3>
+                            <div class="skill-entry">
+                                <span class="skill-name">Statistical.analysis</span>
+                                <span class="skill-level">[█████████░] 95%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">PostgreSQL.core</span>
+                                <span class="skill-level">[██████░░░░] 65%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">Data.visualization</span>
+                                <span class="skill-level">[███████░░░] 75%</span>
+                            </div>
+                            <div class="skill-entry">
+                                <span class="skill-name">eBPF.monitor</span>
+                                <span class="skill-level">[████░░░░░░] 45%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot critical"></div>
+                        <div class="dot warning"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    DEPLOYED_ARSENAL.sys --list-weapons --status=ALL
+                </div>
+                <div class="terminal-body">
+                    <h2 class="section-title">Deployed Combat Systems</h2>
+                    
+                    <div class="project-container">
+                        <div class="project-status-badge status-operational">OPERATIONAL</div>
+                        <h3 class="project-title">STASH_MOCK.WEAPON_SYS</h3>
+                        <div class="project-timestamp">DEPLOYMENT: 2025 | CLASS: FINTECH_DESTROYER</div>
+                        <div class="project-tech">COMBAT_TOOLS: Python.neural | Docker.container | GitHub_Actions.bot | IaC.protocols</div>
+                        <ul class="project-log">
+                            <li>Engineered mock StashAway-grade infrastructure using GitOps combat protocols</li>
+                            <li>Constructed autonomous investment warfare system with continuous deployment arsenals</li>
+                            <li>Weaponized IaC (Terraform) and automated deployment strategies for API combat operations</li>
+                        </ul>
+                        <a href="https://github.com/shanurwan/StashMock" target="_blank" class="access-repo">ACCESS WEAPON</a>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="project-status-badge status-operational">OPERATIONAL</div>
+                        <h3 class="project-title">GREEN_DEVOPS.DASHBOARD_SYS</h3>
+                        <div class="project-timestamp">DEPLOYMENT: 2025 | CLASS: CARBON_TRACKER</div>
+                        <div class="project-tech">COMBAT_TOOLS: GitHub_Actions.bot | CI_CD.pipeline | Docker.container | Terraform.exe | AWS_Lambda.func | PostgreSQL.core</div>
+                        <ul class="project-log">
+                            <li>Constructed CI/CD-enabled platform for energy consumption warfare analysis</li>
+                            <li>Deployed automated pipelines with Terraform, AWS Lambda, PostgreSQL battle systems</li>
+                            <li>Generated tactical insights for cloud cost optimization and carbon warfare reduction</li>
+                        </ul>
+                        <a href="https://github.com/shanurwan/how-green-are-my-clouds" target="_blank" class="access-repo">ACCESS WEAPON</a>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="project-status-badge status-operational">OPERATIONAL</div>
+                        <h3 class="project-title">BNM_COMPLIANT.IAC_SYS</h3>
+                        <div class="project-timestamp">DEPLOYMENT: 2025 | CLASS: COMPLIANCE_ENFORCER</div>
+                        <div class="project-tech">COMBAT_TOOLS: GitHub_Actions.bot | CI_CD.pipeline | Terraform.exe | Ansible.config</div>
+                        <ul class="project-log">
+                            <li>Simulated BNM RMiT compliance automation for Malaysian financial sector warfare</li>
+                            <li>Automated systems reduce human error probability by 85% during combat operations</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin: 50px 0; padding: 20px; background: linear-gradient(135deg, var(--warning-orange), var(--darker-bg)); border: 2px solid var(--warning-orange);">
+                        <h3 style="color: var(--warning-orange); font-family: 'Orbitron', monospace; font-size: 1.4em; font-weight: 700; text-transform: uppercase; text-align: center;">
+                            🔬 EXPERIMENTAL_WARFARE_DIVISION
+                        </h3>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="project-status-badge status-developing">DEVELOPING</div>
+                        <h3 class="project-title">EBPF_OBSERVABILITY.AGENT_SYS</h3>
+                        <div class="project-timestamp">STATUS: ONGOING | 2025 | CLASS: SURVEILLANCE_BOT</div>
+                        <ul class="project-log">
+                            <li>Developing Kubernetes-native surveillance agent for low-overhead battlefield monitoring</li>
+                            <li>Integrated GitOps upgrade protocols with DaemonSet deployment strategies</li>
+                            <li>Enabled pod-level network reconnaissance and system call intelligence gathering</li>
+                        </ul>
+                        <a href="https://github.com/shanurwan/what-is-the-kernel-hiding" target="_blank" class="access-repo">ACCESS WEAPON</a>
+                    </div>
+
+                    <div style="margin: 50px 0; padding: 20px; background: linear-gradient(135deg, var(--cyber-blue), var(--darker-bg)); border: 2px solid var(--cyber-blue);">
+                        <h3 style="color: var(--cyber-blue); font-family: 'Orbitron', monospace; font-size: 1.4em; font-weight: 700; text-transform: uppercase; text-align: center;">
+                            🤖 COLLABORATIVE_COMBAT_UNIT
+                        </h3>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="project-status-badge status-developing">DEVELOPING</div>
+                        <h3 class="project-title">HEAT_ISLAND.ANALYZER_SYS</h3>
+                        <div class="project-timestamp">STATUS: ONGOING | 2025 | CLASS: ENVIRONMENTAL_SCANNER</div>
+                        <div class="project-tech">COMBAT_TOOLS: Python.neural | Docker.container | GitHub_Actions.bot | IaC.protocols</div>
+                        <ul class="project-log">
+                            <li>Designed pipeline for heat intensity visualization using satellite warfare data</li>
+                            <li>Constructed geospatial analysis automation system with continuous deployment protocols</li>
+                        </ul>
+                        <a href="https://github.com/shanurwan/where-does-the-heat-hide" target="_blank" class="access-repo">ACCESS WEAPON</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <div class="dot critical"></div>
+                        <div class="dot warning"></div>
+                        <div class="dot active"></div>
+                    </div>
+                    COMMUNICATION.protocols --establish-secure-channel
+                </div>
+                <div class="terminal-body">
+                    <h2 class="section-title">Communication Network</h2>
+                    <div class="contact-network">
+                        <div class="contact-node">
+                            <div class="contact-icon">📡</div>
+                            <div class="contact-data">
+                                <strong style="color: var(--danger-yellow);">EMAIL_PROTOCOL:</strong><br>
+                                <a href="mailto:wannurshafiqah18@gmail.com">wannurshafiqah18@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-node">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-data">
+                                <strong style="color: var(--danger-yellow);">VOICE_CHANNEL:</strong><br>
+                                <a href="tel:0108190277">+60108190277</a>
+                            </div>
+                        </div>
+                        <div class="contact-node">
+                            <div class="contact-icon">🔗</div>
+                            <div class="contact-data">
+                                <strong style="color: var(--danger-yellow);">PROFESSIONAL_NETWORK:</strong><br>
+                                <a href="http://www.linkedin.com/in/wan-shafiqah-852636223" target="_blank">LINKEDIN.connection</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-text">© 2025 UNIT_SHAFIQAH.EXE | POWERED BY SURVIVAL_INSTINCT | UPTIME: ∞</div>
+        <div class="footer-quote">
+            "IN THE DIGITAL WASTELAND, ONLY THE MOST ADAPTIVE SYSTEMS SURVIVE THE APOCALYPSE"
+        </div>
+    </footer>
+
+    <script>
+        // Matrix Rain Effect
+        function createMatrixRain() {
+            const matrixBg = document.getElementById('matrixBg');
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
+            const columns = Math.floor(window.innerWidth / 20);
+            
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-rain';
+                column.style.left = (i * 20) + 'px';
+                column.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                column.style.animationDelay = Math.random() * 2 + 's';
+                
+                let columnText = '';
+                const columnHeight = Math.floor(Math.random() * 20) + 10;
+                for (let j = 0; j < columnHeight; j++) {
+                    columnText += characters[Math.floor(Math.random() * characters.length)] + '<br>';
+                }
+                column.innerHTML = columnText;
+                matrixBg.appendChild(column);
+            }
+        }
+
+        // Critical Alert System
+        function updateAlertBanner() {
+            const alertBanner = document.getElementById('alertBanner');
+            const alerts = [
+                '🚨 SYSTEM COMPROMISED | INITIATING SURVIVAL PROTOCOL | DEVOPS_UNIT_ACTIVATED 🚨',
+                '⚠️ INFRASTRUCTURE BREACH DETECTED | DEPLOYING COUNTERMEASURES | UNIT_SHAFIQAH.EXE ONLINE ⚠️',
+                '🔥 CRITICAL SYSTEMS FAILING | AUTOMATED RECOVERY INITIATED | ZERO_DOWNTIME_PROTOCOL_ENGAGED 🔥',
+                '⚡ HOSTILE CODE DETECTED | DEFENSIVE_ALGORITHMS_DEPLOYED | MAINTAINING_OPERATIONAL_STATUS ⚡',
+                '🛡️ FIREWALL COMPROMISED | REBUILDING_INFRASTRUCTURE | CI_CD_WEAPONS_ONLINE 🛡️'
+            ];
+            
+            let alertIndex = 0;
+            setInterval(() => {
+                alertBanner.textContent = alerts[alertIndex];
+                alertIndex = (alertIndex + 1) % alerts.length;
+            }, 3000);
+        }
+
+        // Robot Title Glitch Effect
+        function enhanceRobotGlitch() {
+            const robotTitle = document.getElementById('robotTitle');
+            const originalText = 'UNIT_SHAFIQAH.EXE';
+            const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?0123456789';
+            
+            setInterval(() => {
+                if (Math.random() < 0.1) { // 10% chance every interval
+                    let glitchedText = '';
+                    for (let i = 0; i < originalText.length; i++) {
+                        if (Math.random() < 0.3) {
+                            glitchedText += glitchChars[Math.floor(Math.random() * glitchChars.length)];
+                        } else {
+                            glitchedText += originalText[i];
+                        }
+                    }
+                    robotTitle.textContent = glitchedText;
+                    
+                    setTimeout(() => {
+                        robotTitle.textContent = originalText;
+                    }, 100);
+                }
+            }, 200);
+        }
+
+        // Smooth Scrolling with Robotic Effect
+        function initializeNavigation() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Add robotic beep sound effect (visual feedback)
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 100);
+                    }
+                });
+            });
+        }
+
+        // Random System Glitches
+        function initializeSystemGlitches() {
+            const projectTitles = document.querySelectorAll('.project-title');
+            const sectionTitles = document.querySelectorAll('.section-title');
+            
+            setInterval(() => {
+                const allTitles = [...projectTitles, ...sectionTitles];
+                const randomTitle = allTitles[Math.floor(Math.random() * allTitles.length)];
+                
+                randomTitle.style.textShadow = `
+                    0 0 10px var(--primary-red),
+                    2px 2px 0 var(--cyber-blue),
+                    -2px -2px 0 var(--danger-yellow)
+                `;
+                randomTitle.style.transform = 'scale(1.02)';
+                
+                setTimeout(() => {
+                    randomTitle.style.textShadow = '';
+                    randomTitle.style.transform = 'scale(1)';
+                }, 300);
+            }, 4000);
+        }
+
+        // Initialize all effects
+        document.addEventListener('DOMContentLoaded', function() {
+            createMatrixRain();
+            updateAlertBanner();
+            enhanceRobotGlitch();
+            initializeNavigation();
+            initializeSystemGlitches();
+            
+            // Recreate matrix rain on window resize
+            window.addEventListener('resize', () => {
+                document.getElementById('matrixBg').innerHTML = '';
+                setTimeout(createMatrixRain, 100);
+            });
+        });
+
+        // Konami Code Easter Egg
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // Up Up Down Down Left Right Left Right B A
+        
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (JSON.stringify(konamiCode) === JSON.stringify(konamiSequence)) {
+                document.body.style.filter = 'hue-rotate(180deg)';
+                alert('CHEAT CODE ACTIVATED: UNIT_SHAFIQAH.EXE HAS EVOLVED!');
+                setTimeout(() => {
+                    document.body.style.filter = 'none';
+                }, 5000);
+            }
+        });
+    </script>
+</body>
+</html>
