@@ -203,6 +203,20 @@
       nav.nav { flex-direction: column; align-items: center; }
       .robot-stats, .skills-matrix, .contact-network { grid-template-columns: 1fr; }
     }
+  
+    /* Breaking news ticker (scrolls right→left; disappears in Calm Mode) */
+    .breaking-news { position: relative; width: 100%; background: linear-gradient(90deg, #1a0000, #330000); border-top: 2px solid var(--primary-red); border-bottom: 2px solid var(--primary-red); padding: 6px 0; overflow: hidden; }
+    .breaking-news .ticker { display: flex; align-items: center; gap: 12px; padding-inline: 12px; }
+    .bn-tag { font-family: "Orbitron", sans-serif; background: var(--primary-red); color: var(--dark-bg); padding: 4px 10px; letter-spacing: 1px; text-transform: uppercase; border: 2px solid var(--danger-yellow); box-shadow: 0 0 12px var(--primary-red); }
+    .marquee { flex: 1; overflow: hidden; position: relative; }
+    .marquee__inner { display: inline-block; white-space: nowrap; padding-left: 100%; will-change: transform; animation: ticker-scroll 22s linear infinite; }
+    @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+    @media (prefers-reduced-motion: reduce) { .breaking-news { display: none !important; } }
+    .reduce-motion .breaking-news { display: none !important; }
+
+    /* Make entire contact cards clickable */
+    .contact-node { text-decoration: none; color: inherit; cursor: pointer; }
+    .contact-node:focus { outline: 2px solid var(--cyber-blue); outline-offset: 2px; }
   </style>
 </head>
 <body>
@@ -216,6 +230,15 @@
   <!-- Critical Alert Banner (accessible) -->
   <div class="critical-alert" id="alertBanner" role="status" aria-live="polite" aria-atomic="true">
     🚨 SYSTEM COMPROMISED | INITIATING SURVIVAL PROTOCOL | DEVOPS_UNIT_ACTIVATED 🚨
+  </div>
+  <!-- Breaking news ticker -->
+  <div class="breaking-news" id="breakingNews" role="region" aria-label="Breaking news ticker">
+    <div class="ticker">
+      <span class="bn-tag">BREAKING</span>
+      <div class="marquee" aria-hidden="true">
+        <span class="marquee__inner">BREAKING NEWS: New DevOps Engineer WAN NUR SHAFIQAH — Statistics Graduate • Zero Experience, MAX POTENTIAL • Terraform • CI/CD • GitOps • Hire the future of reliability — Deploy now → || BREAKING NEWS: New DevOps Engineer WAN NUR SHAFIQAH — Statistics Graduate • Zero Experience, MAX POTENTIAL • Terraform • CI/CD • GitOps • Hire the future of reliability — Deploy now → || </span>
+      </div>
+    </div>
   </div>
 
   <div class="container" id="main" role="main">
@@ -394,8 +417,28 @@
         <div class="terminal-body">
           <h2 class="section-title" id="contact-title">Communication Network</h2>
           <div class="contact-network">
-            <div class="contact-node">
-              <div class="contact-icon" role="img" aria-label="Email">✉️</div>
+            <a class="contact-node" href="mailto:wannurshafiqah18@gmail.com" aria-label="Email Wan Nur Shafiqah">
+              <div class="contact-icon" aria-hidden="true">✉️</div>
+              <div class="contact-data">
+                <strong style="color: var(--danger-yellow);">EMAIL_PROTOCOL:</strong><br />
+                <span>wannurshafiqah18@gmail.com</span>
+              </div>
+            </a>
+            <a class="contact-node" href="https://wa.me/60108190277" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Wan Nur Shafiqah">
+              <div class="contact-icon" aria-hidden="true">💬</div>
+              <div class="contact-data">
+                <strong style="color: var(--danger-yellow);">WHATSAPP_CHANNEL:</strong><br />
+                <span>+60 10‑819 0277</span>
+              </div>
+            </a>
+            <a class="contact-node" href="https://www.linkedin.com/in/wan-shafiqah-852636223" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile of Wan Nur Shafiqah">
+              <div class="contact-icon" aria-hidden="true">💼</div>
+              <div class="contact-data">
+                <strong style="color: var(--danger-yellow);">PROFESSIONAL_NETWORK:</strong><br />
+                <span>LINKEDIN.connection</span>
+              </div>
+            </a>
+          </div>
               <div class="contact-data"><strong style="color: var(--danger-yellow);">EMAIL_PROTOCOL:</strong><br />
                 <a href="mailto:wannurshafiqah18@gmail.com">wannurshafiqah18@gmail.com</a>
               </div>
@@ -426,7 +469,7 @@
   <!-- Controls: calm mode + copy email -->
   <div class="controls" aria-label="Page controls">
     <button class="btn" id="calmBtn" aria-pressed="false" aria-label="Toggle calm mode (reduce motion)">Calm Mode</button>
-    <button class="btn" id="copyEmailBtn" aria-label="Copy email address">Copy Email</button>
+    <a class="btn" id="cvBtn" href="./Wan_Nur_Shafiqah_CV.pdf" download aria-label="Download CV as PDF">Get CV</a>
   </div>
 
   <noscript>
@@ -589,7 +632,7 @@
         initializeNavigation();
         initializeSystemGlitches();
         setupCalmMode();
-        setupCopyEmail();
+        
         setupKonami();
         window.addEventListener('resize', () => { createMatrixRain(); });
       });
