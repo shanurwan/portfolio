@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Wan Nur Shafiqah</title>
+  <meta name="description" content="About Wan Nur Shafiqah — DevOps-ready graduate with a Statistics background and Azure certifications."/>
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Courier New", monospace;
+      color: #2a1c12;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      overflow: hidden; /* Page itself doesn't scroll */
+      background: #8b5a2b;
+    }
+
+    /* ===== Fixed Background Layer (Pixel Wood-Carver Room) ===== */
+    .room {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #c08a50 0px, #c08a50 24px,
+          #b47d45 24px, #b47d45 25px
+        );
+    }
+    .room::after { /* floor */
+      content: "";
+      position: absolute;
+      left: -10vw; right: -10vw; bottom: -10vh;
+      height: 45vh;
+      transform: skewX(-10deg);
+      background:
+        repeating-linear-gradient(
+          90deg,
+          #7a4f2a 0px, #7a4f2a 26px,
+          #6e4626 26px, #6e4626 27px
+        );
+      box-shadow: 0 -6px 0 #5e3a1f, 0 -10px 0 #3f2717;
+      z-index: 1;
+    }
+    .bench {
+      position: absolute;
+      bottom: 16vh; left: 50%;
+      transform: translateX(-50%);
+      width: min(1100px, 92vw);
+      height: 120px;
+      background: #5b3a1f;
+      box-shadow: 0 0 0 6px #3f2717, inset 0 -10px 0 #3a2415;
+      z-index: 2;
+    }
+    .bench::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -40px;
+      height: 40px;
+      background: repeating-linear-gradient(90deg, #3f2717 0 8px, #321f12 8px 9px);
+    }
+
+    /* Pixel frames (carvings) */
+    .frame {
+      position: absolute;
+      width: 120px; height: 120px;
+      background: #d7b58a;
+      box-shadow:
+        0 0 0 6px #6b3f1d,
+        0 0 0 10px #3f2717,
+        6px 6px 0 #2b1a0f;
+      z-index: 0;
+    }
+    .frame .art {
+      width: 100%; height: 100%;
+      background-size: 12px 12px;
+      box-shadow: inset 0 0 0 4px #b07c49;
+      image-rendering: pixelated;
+    }
+    .veil {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.04), rgba(0,0,0,.12) 60%, rgba(0,0,0,0));
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ===== Foreground Scroll Area (Only this moves) ===== */
+    .scroll {
+      position: relative;
+      z-index: 3;
+      height: 100vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    .content {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+      padding: 12vh 0 22vh;  /* clear the bench and floor visually */
+      display: grid;
+      gap: clamp(24px, 3.2vw, 44px); /* extra space between sections */
+    }
+
+    /* Panels */
+    .panel {
+      background: #d3a774;
+      box-shadow:
+        0 0 0 8px #8b5a2b,
+        0 0 0 14px #3f2717,
+        8px 8px 0 #2b1a0f;
+      padding: clamp(16px, 2.4vw, 28px);
+    }
+    .panel h1, .panel h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 0 #b07c49;
+      margin-bottom: 14px;
+    }
+    .panel p { line-height: 1.45; }
+
+    /* Sub-panels (pixel inset) */
+    .subsection {
+      background: #e2c09a;
+      padding: 14px;
+      box-shadow: inset 0 0 0 4px #b07c49;
+    }
+    .subsection h3 { margin-bottom: 8px; text-transform: uppercase; }
+
+    /* Tech stack list (grouped) */
+    .stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .stack-group {
+      background: #f0d6b5;
+      box-shadow: inset 0 0 0 4px #b07c49;
+      padding: 10px;
+    }
+    .stack-group h4 {
+      font-size: 14px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .stack-group ul { list-style: none; }
+    .stack-group li {
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.35;
+    }
+    .stack-group li::before {
+      content: "";
+      position: absolute; left: 0; top: 8px;
+      width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
+    }
+
+    /* Certification list */
+    .certs { list-style: none; }
+    .certs li {
+      margin-bottom: 8px;
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.35;
+    }
+    .certs li::before {
+      content: "";
+      position: absolute; left: 0; top: 8px;
+      width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
+    }
+    .certs a {
+      color: #1d2766; text-decoration: underline; font-weight: 700;
+    }
+
+    /* Return button */
+    .return {
+      position: fixed;
+      top: 16px; left: 16px;
+      z-index: 4;
+      text-decoration: none;
+      color: #fff;
+      background: #5b78d1;
+      padding: 12px 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 0 0 4px #1d2766, 0 6px 0 #1d2766, 6px 6px 0 rgba(0,0,0,.35);
+      border: none;
+      display: inline-block;
+      transition: transform .05s;
+    }
+    .return:hover { transform: translateY(2px); box-shadow: 0 0 0 4px #1d2766, 0 4px 0 #1d2766, 4px 4px 0 rgba(0,0,0,.35); }
+    .return:active { transform: translateY(6px); box-shadow: 0 0 0 4px #1d2766; }
+
+    /* Pixel sawdust */
+    .chip {
+      position: absolute;
+      width: 6px; height: 6px;
+      background: #e5c49b;
+      box-shadow: 0 0 0 2px #c79d6d;
+      animation: fall linear forwards;
+      z-index: 2;
+      opacity: .9;
+    }
+    @keyframes fall {
+      to { transform: translateY(90vh) rotate(90deg); opacity: .2; }
+    }
+
+    a:focus { outline: 4px solid #1d2766; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <a class="return" href="index.html">Return</a>
+
+  <!-- Fixed background room -->
+  <div class="room" aria-hidden="true">
+    <div class="bench" aria-hidden="true"></div>
+    <div class="veil" aria-hidden="true"></div>
+  </div>
+
+  <!-- Foreground scroller (only this moves) -->
+  <main class="scroll" role="main" aria-label="About and Credentials">
+    <div class="content">
+      <!-- Section 1: About -->
+      <section id="about" class="panel" aria-labelledby="about-title">
+        <h1 id="about-title">About</h1>
+        <p>
+          I’m Wan Nur Shafiqah, a Bachelor of Statistics graduate from University of Malaya.
+          I’m pivoting into DevOps with an automation-first mindset: version-control everything,
+          ship with CI/CD, define infrastructure as code, containerize for consistency, observe what runs,
+          and secure by default. While I have no industry experience yet, I’ve been building
+          hands-on labs and earning cloud credentials that map directly to real delivery workflows.
+          I’m ready to support teams with reliable pipelines, reproducible environments, and rapid feedback loops.
+        </p>
+      </section>
+
+      <!-- Section 2: Skills (full-width horizontal panel) -->
+      <section id="skills" class="panel" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="subsection">
+          <div class="stack">
+            <div class="stack-group">
+              <h4>Core & Scripting</h4>
+              <ul>
+                <li>Linux, Bash, POSIX tools</li>
+                <li>Git, GitHub/GitLab workflows</li>
+                <li>Python for automation</li>
+                <li>YAML/JSON, Markdown</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>CI/CD</h4>
+              <ul>
+                <li>GitHub Actions, GitLab CI</li>
+                <li>Jenkins, Azure DevOps Pipelines</li>
+                <li>Artifacts & registries (ACR, ECR, GHCR)</li>
+                <li>Buildpacks/BuildKit</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Containers & Orchestration</h4>
+              <ul>
+                <li>Docker, Podman</li>
+                <li>Kubernetes (kubectl, k9s)</li>
+                <li>Helm, Kustomize</li>
+                <li>Ingress (Nginx), Service Mesh (Istio basics)</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Infrastructure as Code</h4>
+              <ul>
+                <li>Terraform, Terragrunt</li>
+                <li>Pulumi (intro)</li>
+                <li>CloudFormation (reading & migration)</li>
+                <li>Ansible for config</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Cloud Platforms</h4>
+              <ul>
+                <li>Microsoft Azure (AZ-900, AZ-104)</li>
+                <li>AWS (foundations, IAM, VPC, EC2, EKS basics)</li>
+                <li>GCP fundamentals</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Observability</h4>
+              <ul>
+                <li>Prometheus, Grafana</li>
+                <li>ELK/Elastic Stack</li>
+                <li>OpenTelemetry basics</li>
+                <li>Alerting & SLOs</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Security & Compliance</h4>
+              <ul>
+                <li>Secrets (Azure Key Vault, AWS KMS, Vault)</li>
+                <li>Image & IaC scanning (Trivy, tfsec)</li>
+                <li>Least privilege, policy as code (OPA/Gatekeeper basics)</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Networking & Delivery</h4>
+              <ul>
+                <li>HTTP/TLS, DNS, CDN</li>
+                <li>Nginx, HAProxy</li>
+                <li>Blue/Green & Canary releases</li>
+              </ul>
+            </div>
+            <div class="stack-group">
+              <h4>Data & Serverless (foundation)</h4>
+              <ul>
+                <li>AWS Lambda, Azure Functions</li>
+                <li>S3/Blob Storage, Queues/Topics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Certifications (full-width horizontal panel) -->
+      <section id="certifications" class="panel" aria-labelledby="certs-title">
+        <h2 id="certs-title">Certifications</h2>
+        <div class="subsection">
+          <ul class="certs">
+            <li>
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/EEFA48701339A1F3?sharingId=388278A8699BA1CF" target="_blank" rel="noopener">
+                Microsoft Azure Fundamentals (AZ-900)
+              </a>
+            </li>
+            <li>
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/16016F2B3F9A6FBC?sharingId=388278A8699BA1CF" target="_blank" rel="noopener">
+                Microsoft Azure Administrator (AZ-104)
+              </a>
+            </li>
+            <li>AWS Certified Data Engineer — Associate (planned October 2025)</li>
+            <li>AWS Certified DevOps Engineer — Professional (planned December 2025)</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    /* Generate lots of framed "wood carvings" on the wall */
+    (function makeFrames(){
+      const patterns = [
+        'linear-gradient(#b89268 50%, #caa078 50%)',
+        'repeating-linear-gradient(45deg, #caa078 0 12px, #b9865b 12px 24px)',
+        'repeating-linear-gradient(90deg, #d4b18b 0 6px, #be9368 6px 12px)',
+        'conic-gradient(#c89b6f 0 90deg, #d9b78e 90deg 180deg, #c89b6f 180deg 270deg, #d9b78e 270deg)'
+      ];
+      const room = document.querySelector('.room');
+      const count = 18;
+      for (let i = 0; i < count; i++) {
+        const f = document.createElement('div');
+        f.className = 'frame';
+        const art = document.createElement('div');
+        art.className = 'art';
+        art.style.background = patterns[i % patterns.length];
+        f.appendChild(art);
+
+        const left = Math.random() * 90 + 5;
+        const top = Math.random() * 45 + 6;
+        f.style.left = left + 'vw';
+        f.style.top = top + 'vh';
+        f.style.transform = 'translate(-50%, -50%)';
+
+        room.appendChild(f);
+      }
+    })();
+
+    /* Sprinkle falling sawdust chips near the bench */
+    (function sawdust(){
+      const room = document.querySelector('.room');
+      function dropChip() {
+        const c = document.createElement('div');
+        c.className = 'chip';
+        const x = Math.random() * window.innerWidth;
+        c.style.left = x + 'px';
+        c.style.top = (window.innerHeight * 0.55) + 'px';
+        c.style.animationDuration = (3 + Math.random() * 4) + 's';
+        room.appendChild(c);
+        setTimeout(() => c.remove(), 8000);
+      }
+      for (let i = 0; i < 24; i++) dropChip();
+      setInterval(dropChip, 600);
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wan Nur Shafiqah's Artwork</title>
+    <meta name="description" content="Landing page for Wan Nur Shafiqah — pixel-art themed portfolio."/>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(to bottom, #87CEEB 0%, #98D8E8 30%, #B0E0E6 70%, #87CEEB 100%);
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        /* Pixel Cloud Animation */
+        .cloud {
+            position: absolute;
+            background: white;
+            opacity: 0.8;
+            animation: float 20s infinite linear;
+        }
+        .cloud::before, .cloud::after {
+            content: '';
+            position: absolute;
+            background: white;
+        }
+        .cloud1 {
+            width: 60px; height: 20px;
+            top: 20%; left: -100px;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud1::before {
+            width: 40px; height: 20px; top: -10px; left: 10px;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud1::after {
+            width: 20px; height: 20px; top: -10px; right: 10px;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud2 {
+            width: 80px; height: 24px;
+            top: 15%; left: -120px;
+            animation-delay: -10s;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud2::before {
+            width: 50px; height: 24px; top: -12px; left: 15px;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud2::after {
+            width: 30px; height: 24px; top: -12px; right: 15px;
+            box-shadow: 0 0 0 4px white;
+        }
+        .cloud3 {
+            width: 40px; height: 16px;
+            top: 25%; left: -80px;
+            animation-delay: -15s;
+            box-shadow: 0 0 0 4px white;
+        }
+
+        @keyframes float {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(100vw + 200px)); }
+        }
+
+        /* Pixel Trees */
+        .tree { position: absolute; bottom: 100px; }
+        .tree1 { left: 5%; } .tree2 { left: 15%; } .tree3 { left: 25%; } .tree4 { left: 35%; } .tree5 { left: 45%; }
+        .tree6 { left: 55%; } .tree7 { left: 65%; } .tree8 { left: 75%; } .tree9 { left: 85%; } .tree10 { left: 95%; }
+
+        .trunk {
+            width: 16px; height: 40px; background: #8B4513; margin: 0 auto;
+            box-shadow: 0 0 0 2px #654321;
+        }
+        .leaves {
+            width: 60px; height: 60px; background: #228B22; position: relative; margin-bottom: -10px;
+            box-shadow: 0 0 0 4px #006400;
+        }
+        .leaves::before, .leaves::after {
+            content: ''; position: absolute; background: #228B22; box-shadow: 0 0 0 4px #006400;
+        }
+        .leaves::before { width: 40px; height: 40px; top: -20px; left: 10px; }
+        .leaves::after  { width: 80px; height: 40px; top: 20px; left: -10px; }
+
+        /* Welcome Board */
+        .welcome-board {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: #8B4513;
+            padding: 40px;
+            box-shadow: 0 0 0 8px #654321, 0 8px 16px rgba(0,0,0,0.3);
+            text-align: center;
+            min-width: 500px;
+        }
+        .welcome-title {
+            color: #FFD700;
+            font-size: 84px; font-weight: bold;
+            text-shadow: 6px 6px 0 #B8860B, 12px 12px 24px rgba(0,0,0,0.5);
+            margin-bottom: 30px; letter-spacing: 8px; text-transform: uppercase;
+        }
+        .button-container { display: flex; gap: 20px; justify-content: center; }
+        .pixel-button {
+            background: #4169E1; color: white; border: none;
+            padding: 15px 25px; font-size: 16px;
+            font-family: 'Courier New', monospace; font-weight: bold;
+            cursor: pointer; text-transform: uppercase; letter-spacing: 1px;
+            box-shadow: 0 0 0 4px #191970, 0 6px 0 #191970, 0 6px 8px rgba(0,0,0,0.3);
+            transition: all 0.1s ease; position: relative; top: 0;
+        }
+        .pixel-button:hover {
+            background: #6495ED; top: 2px;
+            box-shadow: 0 0 0 4px #191970, 0 4px 0 #191970, 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .pixel-button:active { top: 6px; box-shadow: 0 0 0 4px #191970, 0 0 0 #191970, 0 0 2px rgba(0,0,0,0.3); }
+        .pixel-button.secondary {
+            background: #32CD32;
+            box-shadow: 0 0 0 4px #228B22, 0 6px 0 #228B22, 0 6px 8px rgba(0,0,0,0.3);
+        }
+        .pixel-button.secondary:hover {
+            background: #90EE90;
+            box-shadow: 0 0 0 4px #228B22, 0 4px 0 #228B22, 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .pixel-button.secondary:active {
+            box-shadow: 0 0 0 4px #228B22, 0 0 0 #228B22, 0 0 2px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .welcome-board { min-width: 90%; padding: 30px 20px; }
+            .welcome-title { font-size: 48px; margin-bottom: 20px; letter-spacing: 4px; }
+            .button-container { flex-direction: column; align-items: center; }
+            .pixel-button { padding: 12px 20px; font-size: 14px; }
+            .tree { display: none; }
+        }
+
+        /* Pixel Sun */
+        .sun {
+            position: absolute; top: 15%; right: 15%;
+            width: 60px; height: 60px; background: #FFD700;
+            box-shadow: 0 0 0 4px #FFA500; animation: glow 3s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 0 4px #FFA500, 0 0 20px #FFD700; }
+            to   { box-shadow: 0 0 0 4px #FFA500, 0 0 40px #FFD700; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pixel Clouds -->
+    <div class="cloud cloud1" aria-hidden="true"></div>
+    <div class="cloud cloud2" aria-hidden="true"></div>
+    <div class="cloud cloud3" aria-hidden="true"></div>
+
+    <!-- Pixel Sun -->
+    <div class="sun" aria-hidden="true"></div>
+
+    <!-- Pixel Trees -->
+    <div class="tree tree1" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree2" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree3" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree4" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree5" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree6" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree7" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree8" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree9" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+    <div class="tree tree10" aria-hidden="true"><div class="leaves"></div><div class="trunk"></div></div>
+
+    <!-- Welcome Board -->
+    <div class="welcome-board" role="dialog" aria-label="Welcome">
+        <h1 class="welcome-title">Hello!</h1>
+        <div class="button-container">
+            <button class="pixel-button" onclick="showAbout()">Who Am I?</button>
+            <button class="pixel-button secondary" onclick="showPortfolio()">Check Out My Work</button>
+        </div>
+    </div>
+
+    <script>
+        function showAbout() { window.location.href = 'about.html'; }
+        function showPortfolio() { window.location.href = 'what-i-do.html'; }
+
+        // Add more clouds dynamically
+        function createCloud() {
+            const cloud = document.createElement('div');
+            cloud.className = 'cloud';
+            cloud.style.width = Math.random() * 40 + 40 + 'px';
+            cloud.style.height = Math.random() * 10 + 15 + 'px';
+            cloud.style.top = Math.random() * 30 + 10 + '%';
+            cloud.style.left = '-100px';
+            cloud.style.animationDuration = Math.random() * 10 + 15 + 's';
+            cloud.style.opacity = Math.random() * 0.3 + 0.5;
+            cloud.style.background = 'white';
+            cloud.style.boxShadow = '0 0 0 4px white';
+            document.body.appendChild(cloud);
+            setTimeout(() => cloud.remove(), 25000);
+        }
+        setInterval(createCloud, 5000);
+    </script>
+</body>
+</html>
