@@ -159,21 +159,228 @@
       width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
     }
 
-    /* Certification list */
-    .certs { list-style: none; }
-    .certs li {
-      margin-bottom: 8px;
-      padding-left: 14px;
+    /* Certification badges */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .cert-badge {
+      background: #f0d6b5;
+      box-shadow: inset 0 0 0 4px #b07c49;
+      padding: 20px;
+      text-align: center;
       position: relative;
-      line-height: 1.35;
     }
-    .certs li::before {
+    .cert-badge.planned {
+      opacity: 0.75;
+      background: #e8d0a8;
+    }
+    .cert-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .cert-link:hover .cert-logo {
+      transform: scale(1.02);
+    }
+    
+    /* Pixel certification logos */
+    .cert-logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+      position: relative;
+      transition: transform 0.2s;
+      image-rendering: pixelated;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    /* Azure Fundamentals - Hexagonal badge with cloud */
+    .azure-fundamentals {
+      background: 
+        linear-gradient(135deg, #0078d4 0%, #106ebe 50%, #005a9e 100%);
+      position: relative;
+    }
+    .azure-fundamentals::before {
       content: "";
-      position: absolute; left: 0; top: 8px;
-      width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
+      position: absolute;
+      top: 8px; left: 8px; right: 8px; bottom: 8px;
+      background: 
+        linear-gradient(135deg, #00bcf2 0%, #0078d4 100%);
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     }
-    .certs a {
-      color: #1d2766; text-decoration: underline; font-weight: 700;
+    .azure-cloud {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px; height: 28px;
+      z-index: 2;
+    }
+    .azure-cloud::before {
+      content: "";
+      position: absolute;
+      top: 8px; left: 8px;
+      width: 32px; height: 12px;
+      background: #ffffff;
+      border-radius: 12px 12px 0 0;
+      box-shadow: 
+        -8px 4px 0 -4px #ffffff,
+        8px 4px 0 -4px #ffffff,
+        -4px 12px 0 -4px #ffffff,
+        4px 12px 0 -4px #ffffff;
+    }
+    
+    /* Azure Administrator - Shield with gear */
+    .azure-admin {
+      background: 
+        linear-gradient(135deg, #0078d4 0%, #106ebe 50%, #005a9e 100%);
+      position: relative;
+    }
+    .azure-admin::before {
+      content: "";
+      position: absolute;
+      top: 8px; left: 8px; right: 8px; bottom: 8px;
+      background: 
+        linear-gradient(135deg, #40e0d0 0%, #0078d4 100%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+    .azure-gear {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px; height: 32px;
+      background: #ffffff;
+      border-radius: 50%;
+      z-index: 2;
+    }
+    .azure-gear::before {
+      content: "";
+      position: absolute;
+      top: -6px; left: 13px;
+      width: 6px; height: 44px;
+      background: #ffffff;
+      border-radius: 3px;
+    }
+    .azure-gear::after {
+      content: "";
+      position: absolute;
+      top: 13px; left: -6px;
+      width: 44px; height: 6px;
+      background: #ffffff;
+      border-radius: 3px;
+    }
+    
+    /* AWS Data Engineer - Circular badge with database */
+    .aws-data {
+      background: 
+        linear-gradient(135deg, #ff9900 0%, #ec7211 50%, #cc7a00 100%);
+      border-radius: 50%;
+      position: relative;
+    }
+    .aws-data::before {
+      content: "";
+      position: absolute;
+      top: 12px; left: 12px; right: 12px; bottom: 12px;
+      background: 
+        linear-gradient(135deg, #ffad33 0%, #ff9900 100%);
+      border-radius: 50%;
+    }
+    .aws-cube {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px; height: 48px;
+      z-index: 2;
+    }
+    .aws-cube::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 40px; height: 12px;
+      background: #232f3e;
+      border-radius: 20px;
+    }
+    .aws-cube::after {
+      content: "";
+      position: absolute;
+      top: 12px; left: 0;
+      width: 40px; height: 24px;
+      background: #146eb4;
+      box-shadow: 
+        0 12px 0 #232f3e,
+        0 24px 0 #146eb4;
+    }
+    
+    /* AWS DevOps - Diamond badge with infinity */
+    .aws-devops {
+      background: 
+        linear-gradient(135deg, #ff9900 0%, #ec7211 50%, #cc7a00 100%);
+      transform: rotate(45deg);
+      position: relative;
+    }
+    .aws-devops::before {
+      content: "";
+      position: absolute;
+      top: 12px; left: 12px; right: 12px; bottom: 12px;
+      background: 
+        linear-gradient(135deg, #ffad33 0%, #ff9900 100%);
+    }
+    .aws-infinity {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      width: 48px; height: 24px;
+      z-index: 2;
+    }
+    .aws-infinity::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 20px; height: 20px;
+      border: 4px solid #232f3e;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+    }
+    .aws-infinity::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0;
+      width: 20px; height: 20px;
+      border: 4px solid #232f3e;
+      border-radius: 50%;
+      border-left-color: transparent;
+      border-top-color: transparent;
+    }
+    
+    .cert-text {
+      position: absolute;
+      bottom: 8px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+      letter-spacing: 1px;
+    }
+    
+    .cert-name {
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    
+    .cert-status {
+      font-size: 10px;
+      color: #666;
+      font-style: italic;
+      text-transform: none;
+      letter-spacing: normal;
     }
 
     /* Return button */
@@ -228,12 +435,12 @@
       <section id="about" class="panel" aria-labelledby="about-title">
         <h1 id="about-title">About</h1>
         <p>
-          I’m Wan Nur Shafiqah, a Bachelor of Statistics graduate from University of Malaya.
-          I’m pivoting into DevOps with an automation-first mindset: version-control everything,
+          I'm Wan Nur Shafiqah, a Bachelor of Statistics graduate from University of Malaya.
+          I'm pivoting into DevOps with an automation-first mindset: version-control everything,
           ship with CI/CD, define infrastructure as code, containerize for consistency, observe what runs,
-          and secure by default. While I have no industry experience yet, I’ve been building
+          and secure by default. While I have no industry experience yet, I've been building
           hands-on labs and earning cloud credentials that map directly to real delivery workflows.
-          I’m ready to support teams with reliable pipelines, reproducible environments, and rapid feedback loops.
+          I'm ready to support teams with reliable pipelines, reproducible environments, and rapid feedback loops.
         </p>
       </section>
 
@@ -326,20 +533,53 @@
       <section id="certifications" class="panel" aria-labelledby="certs-title">
         <h2 id="certs-title">Certifications</h2>
         <div class="subsection">
-          <ul class="certs">
-            <li>
-              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/EEFA48701339A1F3?sharingId=388278A8699BA1CF" target="_blank" rel="noopener">
-                Microsoft Azure Fundamentals (AZ-900)
+          <div class="cert-grid">
+            <!-- Azure Fundamentals AZ-900 -->
+            <div class="cert-badge">
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/EEFA48701339A1F3?sharingId=388278A8699BA1CF" target="_blank" rel="noopener" class="cert-link">
+                <div class="cert-logo azure-fundamentals">
+                  <div class="azure-cloud"></div>
+                  <div class="cert-text">AZ-900</div>
+                </div>
+                <div class="cert-name">Microsoft Azure Fundamentals</div>
               </a>
-            </li>
-            <li>
-              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/16016F2B3F9A6FBC?sharingId=388278A8699BA1CF" target="_blank" rel="noopener">
-                Microsoft Azure Administrator (AZ-104)
+            </div>
+
+            <!-- Azure Administrator AZ-104 -->
+            <div class="cert-badge">
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/wannurshafiqah-1910/16016F2B3F9A6FBC?sharingId=388278A8699BA1CF" target="_blank" rel="noopener" class="cert-link">
+                <div class="cert-logo azure-admin">
+                  <div class="azure-gear"></div>
+                  <div class="cert-text">AZ-104</div>
+                </div>
+                <div class="cert-name">Microsoft Azure Administrator</div>
               </a>
-            </li>
-            <li>AWS Certified Data Engineer — Associate (planned October 2025)</li>
-            <li>AWS Certified DevOps Engineer — Professional (planned December 2025)</li>
-          </ul>
+            </div>
+
+            <!-- AWS Data Engineer (Planned) -->
+            <div class="cert-badge planned">
+              <div class="cert-link">
+                <div class="cert-logo aws-data">
+                  <div class="aws-cube"></div>
+                  <div class="cert-text">DEA</div>
+                </div>
+                <div class="cert-name">AWS Data Engineer — Associate</div>
+                <div class="cert-status">Planned Oct 2025</div>
+              </div>
+            </div>
+
+            <!-- AWS DevOps (Planned) -->
+            <div class="cert-badge planned">
+              <div class="cert-link">
+                <div class="cert-logo aws-devops">
+                  <div class="aws-infinity"></div>
+                  <div class="cert-text">DOP</div>
+                </div>
+                <div class="cert-name">AWS DevOps Engineer — Professional</div>
+                <div class="cert-status">Planned Dec 2025</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -393,4 +633,3 @@
   </script>
 </body>
 </html>
-
