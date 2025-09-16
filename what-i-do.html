@@ -197,21 +197,6 @@
       position: absolute; left: 0; top: 8px;
       width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
     }
-    .link {
-      margin-top: 6px;
-      font-weight: 700;
-    }
-    .link a { color: #1d2766; text-decoration: underline; }
-
-    /* Contact list */
-    .contacts { list-style: none; }
-    .contacts li {
-      position: relative; padding-left: 14px; margin: 6px 0;
-    }
-    .contacts li::before {
-      content: ""; position: absolute; left: 0; top: 8px;
-      width: 6px; height: 6px; background: #3f2717; box-shadow: 2px 2px 0 #b07c49;
-    }
 
     /* Return button */
     .return {
@@ -232,7 +217,167 @@
     .return:hover { transform: translateY(2px); box-shadow: 0 0 0 4px #1d2766, 0 4px 0 #1d2766, 4px 4px 0 rgba(0,0,0,.35); }
     .return:active { transform: translateY(6px); box-shadow: 0 0 0 4px #1d2766; }
 
+    /* ===== PIXEL BUTTONS ===== */
+    .pixel-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      margin: 8px 12px 8px 0;
+      border: none;
+      cursor: pointer;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: transform .05s, box-shadow .05s;
+      position: relative;
+    }
+
+    /* Contact buttons - bigger */
+    .pixel-btn.contact {
+      padding: 16px 24px;
+      margin: 12px;
+      min-width: 180px;
+      min-height: 60px;
+      font-size: 16px;
+    }
+
+    /* Pixel Icon Base */
+    .pixel-btn.contact::before {
+      content: "";
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    /* GitHub Button */
+    .pixel-btn.github {
+      background: #24292e;
+      box-shadow: 0 0 0 4px #1a1e22, 0 6px 0 #1a1e22, 6px 6px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.github::before {
+      background: 
+        /* GitHub cat icon in pixel art */
+        radial-gradient(circle at 8px 8px, #fff 2px, transparent 3px),
+        radial-gradient(circle at 24px 8px, #fff 2px, transparent 3px),
+        linear-gradient(90deg, transparent 6px, #fff 6px 26px, transparent 26px),
+        linear-gradient(transparent 10px, #fff 10px 14px, transparent 14px),
+        linear-gradient(transparent 16px, #fff 16px 20px, transparent 20px),
+        linear-gradient(transparent 22px, #fff 22px 26px, transparent 26px),
+        radial-gradient(circle at 16px 24px, #fff 6px, transparent 7px);
+    }
+    .pixel-btn.github:hover {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 4px #1a1e22, 0 4px 0 #1a1e22, 4px 4px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.github:active {
+      transform: translateY(6px);
+      box-shadow: 0 0 0 4px #1a1e22;
+    }
+
+    /* Email Button */
+    .pixel-btn.contact.email {
+      background: #ea4335;
+      box-shadow: 0 0 0 4px #d33b2c, 0 6px 0 #d33b2c, 6px 6px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.email::before {
+      background:
+        /* Envelope shape */
+        linear-gradient(#fff 0 4px, transparent 4px),
+        linear-gradient(transparent 4px, #fff 4px 28px, transparent 28px),
+        linear-gradient(45deg, transparent 12px, #fff 12px 16px, transparent 16px),
+        linear-gradient(-45deg, transparent 12px, #fff 12px 16px, transparent 16px),
+        linear-gradient(transparent 28px, #fff 28px 32px, transparent 32px);
+    }
+    .pixel-btn.contact.email:hover {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 4px #d33b2c, 0 4px 0 #d33b2c, 4px 4px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.email:active {
+      transform: translateY(6px);
+      box-shadow: 0 0 0 4px #d33b2c;
+    }
+
+    /* WhatsApp Button */
+    .pixel-btn.contact.whatsapp {
+      background: #25d366;
+      box-shadow: 0 0 0 4px #1da851, 0 6px 0 #1da851, 6px 6px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.whatsapp::before {
+      background:
+        /* Phone/chat bubble shape */
+        radial-gradient(circle at 16px 16px, #fff 12px, transparent 13px),
+        radial-gradient(circle at 16px 16px, transparent 8px, #25d366 8px 12px, transparent 12px),
+        linear-gradient(45deg, transparent 20px, #fff 20px 24px, transparent 24px),
+        linear-gradient(135deg, transparent 24px, #fff 24px 28px, transparent 28px);
+    }
+    .pixel-btn.contact.whatsapp:hover {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 4px #1da851, 0 4px 0 #1da851, 4px 4px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.whatsapp:active {
+      transform: translateY(6px);
+      box-shadow: 0 0 0 4px #1da851;
+    }
+
+    /* LinkedIn Button */
+    .pixel-btn.contact.linkedin {
+      background: #0077b5;
+      box-shadow: 0 0 0 4px #005885, 0 6px 0 #005885, 6px 6px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.linkedin::before {
+      background:
+        /* LinkedIn "in" shape */
+        linear-gradient(#fff 0 8px, transparent 8px),
+        linear-gradient(transparent 12px, #fff 12px 32px, transparent 32px),
+        linear-gradient(90deg, transparent 4px, #fff 4px 8px, transparent 8px),
+        linear-gradient(90deg, transparent 12px, #fff 12px 16px, transparent 16px),
+        linear-gradient(90deg, transparent 20px, #fff 20px 28px, transparent 28px);
+    }
+    .pixel-btn.contact.linkedin:hover {
+      transform: translateY(2px);
+      box-shadow: 0 0 0 4px #005885, 0 4px 0 #005885, 4px 4px 0 rgba(0,0,0,.4);
+    }
+    .pixel-btn.contact.linkedin:active {
+      transform: translateY(6px);
+      box-shadow: 0 0 0 4px #005885;
+    }
+
+    /* Contact buttons container */
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      margin-top: 20px;
+    }
+
+    /* Project link button container */
+    .btn-container {
+      margin-top: 12px;
+    }
+
     a:focus { outline: 4px solid #1d2766; outline-offset: 2px; }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .pixel-btn {
+        padding: 10px 16px;
+        font-size: 12px;
+        margin: 6px 8px 6px 0;
+      }
+      .contact-buttons {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -275,7 +420,9 @@
               <li>Built a reproducible investment automation system, mirroring continuous deployment pipelines.</li>
               <li>Explored IaC (Terraform) and automated deployment strategies for API services.</li>
             </ul>
-            <div class="link">Repo: <a href="https://github.com/shanurwan/StashMock" target="_blank" rel="noopener">github.com/shanurwan/StashMock</a></div>
+            <div class="btn-container">
+              <a href="https://github.com/shanurwan/StashMock" target="_blank" rel="noopener" class="pixel-btn github">GitHub Repo</a>
+            </div>
           </article>
 
           <article class="proj">
@@ -285,7 +432,9 @@
               <li>Simulates BNM RMiT compliance automation used in Malaysian banks and fintechs.</li>
               <li>Automation reduces human error and audit overhead by 85%.</li>
             </ul>
-            <div class="link">Repo: <a href="https://github.com/shanurwan/are-we-compliant-yet-" target="_blank" rel="noopener">github.com/shanurwan/are-we-compliant-yet-</a></div>
+            <div class="btn-container">
+              <a href="https://github.com/shanurwan/are-we-compliant-yet-" target="_blank" rel="noopener" class="pixel-btn github">GitHub Repo</a>
+            </div>
           </article>
         </div>
 
@@ -299,7 +448,9 @@
               <li>Integrated GitOps upgrades with DaemonSet deployments.</li>
               <li>Enabled pod-level network and system call metrics for reliability tracking.</li>
             </ul>
-            <div class="link">Repo: <a href="https://github.com/shanurwan/what-is-the-kernel-hiding" target="_blank" rel="noopener">github.com/shanurwan/what-is-the-kernel-hiding</a></div>
+            <div class="btn-container">
+              <a href="https://github.com/shanurwan/what-is-the-kernel-hiding" target="_blank" rel="noopener" class="pixel-btn github">GitHub Repo</a>
+            </div>
           </article>
 
           <article class="proj">
@@ -310,7 +461,9 @@
               <li>Automated pipelines with Terraform, AWS Lambda, PostgreSQL.</li>
               <li>Delivered insights for cloud cost and carbon optimization.</li>
             </ul>
-            <div class="link">Repo: <a href="https://github.com/shanurwan/how-green-are-my-clouds" target="_blank" rel="noopener">github.com/shanurwan/how-green-are-my-clouds</a></div>
+            <div class="btn-container">
+              <a href="https://github.com/shanurwan/how-green-are-my-clouds" target="_blank" rel="noopener" class="pixel-btn github">GitHub Repo</a>
+            </div>
           </article>
         </div>
       </section>
@@ -318,11 +471,12 @@
       <!-- Section 2: Contact -->
       <section id="contact" class="panel" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
-        <ul class="contacts">
-          <li>Email: <a href="mailto:wannurshafiqah18@gmail.com">wannurshafiqah18@gmail.com</a></li>
-          <li>Phone: <a href="tel:+60108190277">0108190277</a></li>
-          <li>LinkedIn: <a href="http://www.linkedin.com/in/wan-shafiqah-852636223" target="_blank" rel="noopener">linkedin.com/in/wan-shafiqah-852636223</a></li>
-        </ul>
+        <p>Get in touch through any of these channels:</p>
+        <div class="contact-buttons">
+          <a href="mailto:wannurshafiqah18@gmail.com" class="pixel-btn contact email">Email</a>
+          <a href="https://wa.me/60108190277" target="_blank" rel="noopener" class="pixel-btn contact whatsapp">WhatsApp</a>
+          <a href="http://www.linkedin.com/in/wan-shafiqah-852636223" target="_blank" rel="noopener" class="pixel-btn contact linkedin">LinkedIn</a>
+        </div>
       </section>
     </div>
   </main>
